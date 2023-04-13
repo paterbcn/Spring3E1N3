@@ -6,12 +6,9 @@ Crea un Tema con un Usuario/a y otro con dos y muestra la recepción de los mens
  */
 
 const { newUser, newTopic } = require("./functions");
-const topic = require("./Clases/Clase_temas");
+const { Topic } = require("./Clases/Clase_temas");
 
-const user1 = newUser("juan");
-const ai = newTopic("Ai");
-ai.addMesagge(user1, "esto es una prueba");
-ai.addSubscribers(user1);
-console.log(ai.name);
-console.log(ai.messages);
-console.log(ai.suscribers);
+const a = { a: 1 };
+const history = new Topic();
+history.on(`newMess`, (msg) => console.log(msg));
+history.addMesagge(a, "txt");

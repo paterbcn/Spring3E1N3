@@ -1,7 +1,8 @@
 const EventEmmiter = require("events");
 
-class User {
+class User extends EventEmmiter {
   constructor(name) {
+    super();
     this.name = name;
   }
 }

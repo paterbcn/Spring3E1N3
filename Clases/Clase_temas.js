@@ -1,7 +1,8 @@
 const EventEmmiter = require("events");
 
-class Topic extends eventEmmiter {
+class Topic extends EventEmmiter {
   constructor(name) {
+    super();
     this.name = name;
   }
   messages = [];
@@ -9,6 +10,7 @@ class Topic extends eventEmmiter {
 
   addMesagge(user, text) {
     this.messages.push({ User: user, mesagge: text });
+    this.emit(`newMess`, user);
   }
 
   addSubscribers(user) {
