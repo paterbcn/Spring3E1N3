@@ -5,7 +5,13 @@ También lo mostrarán por consola cada uno de los Usuarios/as que estén suscri
 Crea un Tema con un Usuario/a y otro con dos y muestra la recepción de los mensajes por los usuarios/as. Utiliza el módulo eventos.
  */
 
-const newUser = require("./functions")
+const { newUser, newTopic } = require("./functions");
+const topic = require("./Clases/Clase_temas");
 
-const user1 = newUser("juan")
-console.log(user1.name)
+const user1 = newUser("juan");
+const ai = newTopic("Ai");
+ai.addMesagge(user1, "esto es una prueba");
+ai.addSubscribers(user1);
+console.log(ai.name);
+console.log(ai.messages);
+console.log(ai.suscribers);
