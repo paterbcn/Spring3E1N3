@@ -1,9 +1,9 @@
-class User{
-    constructor(name){
-        this.name=name
-    }
+class User {
+  constructor(name) {
+    this.name = name;
+  }
 }
 
-module.exports={
-    User
-}
+module.exports = {
+  User,
+};
